@@ -1,0 +1,25 @@
+﻿@model List<Intro.Models.Book>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Books</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Edition</th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td><a href="/book/details/@item.Id">@item.Title</a></td>
+            <td>@item.Author</td>
+            <td>@item.Edition</td>
+        </tr>
+    }
+</table>
+
+

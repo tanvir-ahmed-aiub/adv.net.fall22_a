@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+<h1>@Request["Title"]</h1>
+<h2>@Request["Author"]</h2>
+<h3>@Request["Edition"]</h3>
+
+ @ViewBag.BookName
+
+<h2>Create</h2>
+
+<form action="" method="post">
+    <input type="text" class="form-control" placeholder="Title" name="Title" value="" />
+    <input type="text" name="Author" value="" class="form-control" placeholder="Author" />
+    <input type="text" name="Edition" value="" class="form-control" placeholder="Edition" />
+    <input type="submit" class="btn btn-success" value="Add" />
+</form>
+
