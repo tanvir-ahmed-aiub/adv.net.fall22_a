@@ -39,11 +39,15 @@ namespace Intro.Controllers
         }
         [HttpPost]
         public ActionResult Create(Book book) {
+            if (ModelState.IsValid)
+            {
+                return RedirectToAction("Index", "Student");
+            }
             //ViewBag.BookName = Request["Title"];
             //
             //ViewBag.BookName = form["Title"];
             ViewBag.BookName = book.Author;
-            return View();   
+            return View(book);   
         }
 
         public ActionResult Details(int id) {
