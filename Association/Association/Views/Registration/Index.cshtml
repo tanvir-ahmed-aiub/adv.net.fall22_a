@@ -1,0 +1,18 @@
+﻿@model List<Association.DB.Cours>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<form action="/registration/index" method="post">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li><input type="checkbox" name="courses[]" value="@item.Id">  @item.Name | @item.CourseStudents.Count</li>
+        }
+
+    </ul>
+    <input type="submit" value="Register"/>
+</form>
+
