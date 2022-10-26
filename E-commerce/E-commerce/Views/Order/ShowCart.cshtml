@@ -1,0 +1,53 @@
+﻿@model IEnumerable<E_commerce.Models.ProductModel>
+
+@{
+    ViewBag.Title = "ShowCart";
+}
+
+<h2>ShowCart</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+
+    </tr>
+    @{
+        int total = 0;
+    }
+    @foreach (var item in Model)
+    {
+        { total += (item.Price * item.Qty); }
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+
+        </tr>
+    }
+    <tr>
+
+        <td colspan="2" align="right">Total: @total</td>
+    </tr>
+</table>
+<form action="/order/checkout" method="post">
+    <input type="hidden" value="@total" name="total" />
+    <input type="submit" value="Check Out" class="btn btn-danger"/>
+</form>
+

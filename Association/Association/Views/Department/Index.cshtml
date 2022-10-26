@@ -13,7 +13,11 @@
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Name)
+           
         </th>
+        <th>Student Count</th>
+        <th>Course Count</th>
+
         <th></th>
     </tr>
 
@@ -22,6 +26,8 @@
         <td>
             @Html.DisplayFor(modelItem => item.Name)
         </td>
+        <td>@item.Students.Count</td>
+        <td>@item.Courses.Count</td>
         <td>
             <a href="/department/details/@item.Id">Details</a> |
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |

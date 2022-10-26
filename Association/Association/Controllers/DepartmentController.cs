@@ -19,7 +19,7 @@ namespace Association.Controllers
         public ActionResult Details(int id)
         {
             UMS_fall22_aEntities db = new UMS_fall22_aEntities();
-            var d = (from dept in db.Departments
+            var d = (from dept in db.Departments.Include("Students").Include("Courses")
                      where dept.Id == id
                      select dept).SingleOrDefault();
             //var students = (from student in db.Students
