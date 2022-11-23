@@ -1,0 +1,20 @@
+<script>
+	function loadDoc() {
+	
+	  const xhttp = new XMLHttpRequest();
+	  xhttp.onreadystatechange = function(){
+		if(this.readyState == 4 && this.status ==200){
+			var data = this.responseText;
+			debugger;
+		}
+	  };
+	  xhttp.open("GET", "https://localhost:44350/api/groups", true);
+	  xhttp.send();
+	}
+</script>
+
+<html>
+	<body>
+		<button onclick="loadDoc()">Click Me</button>
+	</body>
+</html>
