@@ -4,7 +4,6 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\bin\Debug\AutoMapper.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\bin\Debug\DAL.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\bin\Debug\EntityFramework.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\bin\Debug\DAL.pdb
-C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\bin\Debug\DAL.dll.config
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\bin\Debug\AutoMapper.xml
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\bin\Debug\EntityFramework.xml
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
@@ -12,3 +11,4 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\obj\Debug\BLL.csproj.CoreCompil
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\obj\Debug\BLL.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\obj\Debug\BLL.pdb
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BLL\bin\Debug\DAL.dll.config

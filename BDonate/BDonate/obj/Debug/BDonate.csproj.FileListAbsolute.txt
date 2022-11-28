@@ -66,7 +66,6 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\System.Web.Http.xml
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\System.Web.Http.WebHost.xml
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\DAL.pdb
-C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\DAL.dll.config
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\AutoMapper.xml
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\EntityFramework.xml
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\obj\Debug\BDonate.csproj.AssemblyReference.cache
@@ -77,3 +76,6 @@ C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\obj\Debug\BDonate.pdb
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\System.Web.Cors.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\System.Web.Http.Cors.dll
 C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\System.Web.Http.Cors.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\EntityFramework.SqlServer.dll
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\EntityFramework.SqlServer.xml
+C:\Users\Tanvir Ahmed\Desktop\.NET\A\BDonate\BDonate\bin\DAL.dll.config
