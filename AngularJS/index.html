@@ -1,0 +1,101 @@
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+        
+        var app = angular.module("my-app",[]);
+        app.factory('interceptor', [function () {
+       
+        var interceptor = {
+            
+            request: function (config) {
+                
+                config.headers.Authorization="ABCD";
+                return config;
+            },
+           
+            response: function (response) {
+               
+                
+                return response;
+            }
+        };
+        
+        return interceptor;
+    }]);
+        app.config(function($httpProvider){
+            $httpProvider.interceptors.push('interceptor');
+        });
+         
+        app.controller('fctrl',function($scope){
+            $scope.name = "Tanvir";
+        });
+
+        app.controller('sctrl',function($scope){
+            $scope.cars = ["BMW","Toyota","Tata"];
+        });
+        app.controller('donorCtrl',function($scope,$http){
+            $http.get("https://localhost:44309/api/posts").then(function(resp){
+                debugger;
+               $scope.posts= resp.data;
+
+            },function(err){
+                debugger;
+
+            });
+        });
+
+        app.controller('pstCtrl',function($scope,$http){
+            $scope.createPost=function(){
+                var data = {Title: $scope.userTitle};
+                $http.post("https://localhost:44309/api/posts/create",data).then(function(res){
+                    debugger;
+                    var data = res.data;
+                    localStorage.setItem("_token",data.Title);
+                },function(err){
+
+                });
+            };
+        });
+
+
+        
+    </script>
+   
+    <body ng-app="my-app">
+        <input type="text" ng-model="name"> <br>
+        My name is {{name}} <br>
+        My name is {{name}} <br>
+        My name is {{name}} <br>
+        My name is {{name}} <br>
+        My name is {{name}}
+
+        <div ng-controller="fctrl">
+            My name is {{name}}
+        </div>
+        <div>
+            My name is {{name}}
+        </div>
+
+        <div ng-controller="sctrl">
+            <ul>
+                <li ng-repeat="c in cars">{{c}}</li>
+            </ul>
+        </div>
+        <div ng-controller="donorCtrl">
+            <table border="1" style="border-collapse:collapse">
+                <tr ng-repeat="p in posts">
+                    <td>{{p.Id}}</td>
+                    <td>{{p.Title}}</td>
+                </tr>
+            </table>
+        </div>
+        <div ng-controller="pstCtrl">
+            <form ng-submit="createPost()">
+                <input type="text" ng-model="userTitle">
+                <input type="submit" >
+            </form>
+            
+
+        </div>
+    </body>
+</html>
