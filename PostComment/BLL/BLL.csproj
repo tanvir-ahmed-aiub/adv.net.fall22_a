@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DTOs\CommentDTO.cs" />
+    <Compile Include="DTOs\PostCommentDTO.cs" />
     <Compile Include="DTOs\PostDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\PostService.cs" />

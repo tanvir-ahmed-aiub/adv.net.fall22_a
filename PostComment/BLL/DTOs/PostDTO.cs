@@ -13,5 +13,7 @@ namespace BLL.DTOs
         public int? PostedBy { get; set; }
         
 
+
+
     }
 }

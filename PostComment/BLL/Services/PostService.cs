@@ -42,5 +42,14 @@ namespace BLL.Services
             var mapper = new Mapper(cfg);
             return mapper.Map<PostDTO>(data);
         }
+        public static PostCommentDTO GetwithComments(int id) {
+            var data = DataAccessFactory.PostDataAccess().Get(id);
+            var cfg = new MapperConfiguration(c => {
+                c.CreateMap<Post, PostCommentDTO>();
+                c.CreateMap<Comment, CommentDTO>();
+            });
+            var mapper = new Mapper(cfg);
+            return mapper.Map<PostCommentDTO>(data);
+        }
     }
 }

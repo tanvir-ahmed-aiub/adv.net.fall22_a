@@ -1,3 +1,4 @@
+using PostComment.Scheduler;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace PostComment
     {
         protected void Application_Start()
         {
+            PostScheduler.Run();
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }

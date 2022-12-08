@@ -42,5 +42,31 @@ namespace PostComment.Controllers
             }
             return Request.CreateResponse(HttpStatusCode.BadRequest, new { });
         }
+        [Route("api/post/{id}")]
+        [HttpGet]
+        public HttpResponseMessage Post(int id)
+        {
+            try
+            {
+                var data = PostService.Get(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex) {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
+        [Route("api/post/{id}/comments")]
+        [HttpGet]
+        public HttpResponseMessage PostwithComments(int id) {
+            try
+            {
+                var data = PostService.GetwithComments(id);
+                return Request.CreateResponse(HttpStatusCode.OK, data);
+            }
+            catch (Exception ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
+        }
     }
 }
